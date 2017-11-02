@@ -8,7 +8,7 @@ import java.io.Serializable;
  * @author hwyou
  *
  */
-public class BaseEntity implements Serializable {
+public abstract class BaseEntity implements Serializable {
 
 	/**
 	 * Ö÷¼ü

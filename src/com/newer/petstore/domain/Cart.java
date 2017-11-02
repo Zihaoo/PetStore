@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Set;
 
 /**
- * 购物车
+ * 购物车(强实体，弱实体）
  * 
  * @author hwyou
  *
@@ -15,8 +15,7 @@ public class Cart {
 	private int id;
 
 	private BigDecimal total;
-	// 用户账号
-	private Account account;
+
 	// 商品，数量
 	private HashMap<Product, Integer> map = new HashMap<>();
 
@@ -46,13 +45,7 @@ public class Cart {
 		this.id = id;
 	}
 
-	public Account getAccount() {
-		return account;
-	}
 
-	public void setAccount(Account account) {
-		this.account = account;
-	}
 
 	public HashMap<Product, Integer> getMap() {
 		return map;
