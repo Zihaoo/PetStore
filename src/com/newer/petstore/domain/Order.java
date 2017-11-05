@@ -19,8 +19,7 @@ public class Order {
 	private int id;
 	//时间
 	private Date time;
-	//账号
-	private Account account;
+
 	//送货地址（如果空，始终账号的默认地址）
 	private Address address;
 	//订单项
@@ -48,13 +47,8 @@ public class Order {
 		this.time = time;
 	}
 
-	public Account getAccount() {
-		return account;
-	}
 
-	public void setAccount(Account account) {
-		this.account = account;
-	}
+
 
 	public Address getAddress() {
 		return address;

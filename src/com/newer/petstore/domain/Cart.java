@@ -11,9 +11,7 @@ import java.util.Set;
  *
  */
 public class Cart {
-	// 关系型数据库的主键
-	private int id;
-
+	//没有持久化，通过计算获得
 	private BigDecimal total;
 
 	// 商品，数量
@@ -37,12 +35,8 @@ public class Cart {
 		return total;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
+	public void getSize() {
+		
 	}
 
 
