@@ -80,6 +80,12 @@ public class Product extends BaseEntity {
 	public void setCategory(Category category) {
 		this.category = category;
 	}
+
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", title=" + title + ", price=" + price + ", info=" + info + ", quantity="
+				+ quantity + ", salesNum=" + salesNum + ", picPath=" + picPath + ", category=" + category + "]";
+	}
 	
 	
 }

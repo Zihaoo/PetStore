@@ -7,8 +7,6 @@ import java.util.List;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import javax.servlet.annotation.WebListener;
-
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -21,22 +19,15 @@ import com.newer.petstore.mapper.CategoryMapper;
 /**
  * 监听器（特定事件发生时，和应用程序的上下文）
  * 
- * @author wtao
+ * @author 
  *
  */
-@WebListener
+//@WebListener
 public class AppListener implements ServletContextListener {
 
 	private SqlSessionFactory factory;
 
-	/**
-	 * 销毁（程序推出）由容器调用（回调 callback）
-	 */
-	public void contextDestroyed(ServletContextEvent sce) {
-		// TODO
-
-	}
-
+	
 	/**
 	 * 应用程序的初始化(代码重构)
 	 */
@@ -89,6 +80,14 @@ public class AppListener implements ServletContextListener {
 
 		sqlSession.commit();
 		sqlSession.close();
+	}
+
+	/**
+	 * 销毁（程序推出）由容器调用（回调 callback）
+	 */
+	public void contextDestroyed(ServletContextEvent sce) {
+		// TODO
+
 	}
 
 }
