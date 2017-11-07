@@ -21,6 +21,16 @@ public class Cart {
 		// TODO Auto-generated constructor stub
 	}
 
+	// 重载
+	public void addCart(Product product) {
+		addCart(product,1);
+	}
+	
+	public void addCart(Product product, int n) {
+		map.put(product, n);
+	}
+	
+	
 	/**
 	 * 购物车总金额
 	 * 

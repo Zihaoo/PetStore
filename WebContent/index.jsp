@@ -12,7 +12,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<h1>在线人数：${online }<a href="logout">注销</a></h1>
+	
 	<%-- 	<%
 		List<Category> list = (List<Category>) application.getAttribute(AppInfo.APP_CATEGORY_LIST);
 
@@ -24,23 +25,23 @@
 	%> --%>
 	<table>
 		<tr>
-			<th>编号</th>
 			<th>名称</th>
 			<th>价格</th>
 			<th>信息</th>
 			<th>库存</th>
 			<th>销量</th>
 			<th>图片地址</th>
+			<th></th>
 		</tr>
 		<c:forEach items="${products}" var="e">
 		<tr>
-			<td>${e.id}</td>
 			<td>${e.title}</td>
 			<td>${e.price}</td>
 			<td>${e.info}</td>
 			<td>${e.quantity}</td>
 			<td>${e.salesNum}</td>
 			<td><img alt="" src="${e.picPath}"></td>
+			<td><a href="cart?id=${e.id }">加入购物车</a></td>
 		</tr>
 		</c:forEach>
 	</table>
