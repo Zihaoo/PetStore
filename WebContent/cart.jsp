@@ -10,9 +10,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link href="css/master.css" rel="stylesheet">
 </head>
 <body>
-
+	<%@ include file="header.jsp"%>
 	<h1>购物车</h1>
 	<%
 		Cart cart = (Cart) session.getAttribute(AppInfo.SESSION_CART);
@@ -39,5 +40,6 @@
 			}
 		%>
 	</table>
+	<%@ include file="footer.jsp"%>
 </body>
 </html>

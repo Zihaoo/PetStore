@@ -10,8 +10,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link href="css/master.css" rel="stylesheet">
 </head>
 <body>
+	<%@ include file="header.jsp"%>
 	<h1>在线人数：${online }<a href="logout">注销</a></h1>
 	
 	<%-- 	<%
@@ -45,7 +47,7 @@
 		</tr>
 		</c:forEach>
 	</table>
-
+	<%@ include file="footer.jsp"%>
 
 </body>
 </html>

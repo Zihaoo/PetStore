@@ -15,7 +15,7 @@ INSERT INTO Product(category_id, title, pic, info, price, quantity, salesNum) VA
 INSERT INTO Product(category_id, title, pic, info, price, quantity, salesNum) VALUES (2, 'Labrador Retriever','/images/dog5.gif','Great hunting dog', 6.0, 10, 0);
 INSERT INTO Product(category_id, title, pic, info, price, quantity, salesNum) VALUES (2, 'Chihuahua','/images/dog4.gif','Great companion dog', 6.0, 10, 0);
 INSERT INTO Product(category_id, title, pic, info, price, quantity, salesNum) VALUES (3,'Rattlesnake','/images/snake1.gif','Doubles as a watch dog', 6.0, 10, 0);
-INSERT INTO Product(category_id, title, pic, info, price, quantity, salesNum) VALUES (3,'Iguana','/imageszard1.gif','Friendly green friend', 6.0, 10, 0);
+INSERT INTO Product(category_id, title, pic, info, price, quantity, salesNum) VALUES (3,'Iguana','/lizard1.gif','Friendly green friend', 6.0, 10, 0);
 INSERT INTO Product(category_id, title, pic, info, price, quantity, salesNum) VALUES (4,'Manx','/images/cat2.gif','Great for reducing mouse populations', 6.0, 10, 0);
 INSERT INTO Product(category_id, title, pic, info, price, quantity, salesNum) VALUES (4,'Persian','/images/cat1.gif','Friendly house cat, doubles as a princess', 6.0, 10, 0);
 INSERT INTO Product(category_id, title, pic, info, price, quantity, salesNum) VALUES (5,'Amazon Parrot','/images/bird2.gif','Great companion for up to 75 years', 6.0, 10, 0);
