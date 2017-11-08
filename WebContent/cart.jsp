@@ -40,6 +40,8 @@
 			}
 		%>
 	</table>
+	
+	<div><a href="account.jsp">结账</a></div>
 	<%@ include file="footer.jsp"%>
 </body>
 </html>
