@@ -29,17 +29,18 @@ public class CartServlet extends HttpServlet {
 		
 		
 		List<Product> list = (List<Product>) getServletContext().getAttribute(AppInfo.APP_PRPDUCT_LIST);
-		
+		//System.out.println(list);
 		Product product = null;
 		for(Product p : list) {
 			if(p.getId() == id) {
 				product = p;
 			}
 		}
+		
 		//加入购物车
 		Cart cart = (Cart) request.getSession().getAttribute(AppInfo.SESSION_CART);
+		System.out.println(product);
 		cart.addCart(product);
-		
 		//响应重定向
 		response.sendRedirect("cart.jsp");
 	}

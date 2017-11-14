@@ -26,7 +26,7 @@ public class SeachServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String key = request.getParameter("keyWords");
+		String key = request.getParameter("keywords");
 
 		SqlSessionFactory factory = (SqlSessionFactory) getServletContext().getAttribute(AppInfo.APP_SESSION_FACTORY);
 

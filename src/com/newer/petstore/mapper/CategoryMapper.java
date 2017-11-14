@@ -24,7 +24,6 @@ public interface CategoryMapper {
 	 *            分类的名称
 	 * @return List<Product> 该分类中的所有商品
 	 */
-	@Select("select p.id,p.title,price,info,quantity,salesNum,pic,c.title\r\n"
-			+ "from product p,category c where p.category_id=c.id;")
+	@Select("select p.id,p.title,price,info,quantity,salesNum,pic,c.title from product p,category c where p.category_id=c.id")
 	List<Product> getProductsByCategory(String title);
 }
