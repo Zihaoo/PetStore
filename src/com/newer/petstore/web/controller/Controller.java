@@ -6,6 +6,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.ibatis.session.SqlSession;
+
 /**
  * 控制器的执行(流程的规范）
  * 
@@ -13,7 +15,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  */
 public interface Controller {
-
-	String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException;
+	
+	//执行操作，三个参数
+	String execute(HttpServletRequest request, HttpServletResponse response, SqlSession sqlSession) throws ServletException, IOException;
 	
 }

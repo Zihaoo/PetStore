@@ -1,11 +1,29 @@
 package com.newer.petstore.mapper;
 
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
-public interface AccountMapper {
+import com.newer.petstore.domain.Account;
 
-	@Select("select password from account where name=#{user}")
-	String login(String user);
+public interface AccountMapper {
+	/**
+	 * 创建账号
+	 * 
+	 * @param account
+	 *            账号对象
+	 * 
+	 */
+	@Insert("insert into account(name,password) values(#{name},#{password})")
+	void create(Account account);
+
+	/**
+	 * 登陆
+	 * 
+	 * @param user
+	 * @return
+	 */
+	@Select("select * from account where name=#{user}")
+	Account login(String user);
 
 	/**
 	 * 检查用户名是否存在

@@ -17,16 +17,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 CREATE SCHEMA IF NOT EXISTS `store` DEFAULT CHARACTER SET utf8 ;
 USE `store` ;
 
--- -----------------------------------------------------
--- Table `store`.`Account`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `store`.`Account` (
-  `id` INT NOT NULL,
-  `name` VARCHAR(45) NULL,
-  `address` VARCHAR(45) NULL,
-  `password` VARCHAR(45) NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
+
 
 
 -- -----------------------------------------------------

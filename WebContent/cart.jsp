@@ -14,7 +14,7 @@
 </head>
 <body>
 	<%@ include file="header.jsp"%>
-	<h1>购物车</h1>
+	<h1>${account.name}购物车<a href="index.jsp">继续购物</a></h1>
 	<%
 		Cart cart = (Cart) session.getAttribute(AppInfo.SESSION_CART);
 		HashMap<Product,Integer> m = cart.getMap();

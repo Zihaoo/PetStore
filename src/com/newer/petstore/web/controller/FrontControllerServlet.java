@@ -10,6 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import com.newer.petstore.AppInfo;
+
 /**
  * 前端控制器 （拦截所有的请求）
  * 
@@ -19,6 +23,11 @@ import javax.servlet.http.HttpServletResponse;
 public class FrontControllerServlet extends HttpServlet {
 	// 不用配置文件的写法
 	HashMap<String, Class> map = new HashMap<>();
+	
+	/**
+	 * 数据库的绘画工厂
+	 */
+	SqlSessionFactory factory;
 
 	@Override
 	public void init(ServletConfig config) throws ServletException {
@@ -27,6 +36,9 @@ public class FrontControllerServlet extends HttpServlet {
 		map.put("/register.action", RegisterController.class);
 		map.put("/login.action", LoginController.class);
 		map.put("/checkName.action", CheckAccountController.class);
+		
+		//获得会话工厂
+		factory = (SqlSessionFactory)getServletContext().getAttribute(AppInfo.APP_SESSION_FACTORY);
 
 	}
 
@@ -45,8 +57,9 @@ public class FrontControllerServlet extends HttpServlet {
 			Controller controller;
 			try {
 				controller = (Controller) controllerClass.newInstance();
+				
 				// 调用执行
-				String result = controller.execute(request, response);
+				String result = controller.execute(request, response, factory.openSession());
 				// 响应的重定向
 				if (result.startsWith("ajax:")) {
 					String data = result.substring(5);

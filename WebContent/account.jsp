@@ -65,14 +65,14 @@ form lable {
 
 	<div id="main">
 		<div id="login">
-			<h1>登陆</h1>
+			<h1>登陆  ${errorMessage}</h1>
 			<form action="login.action">
 				<div>
-					<label>用户名</label><input name="account">
+					<label>用户名</label><input name="account" required>
 				</div>
 				<div>
 					<label>密码</label><input name="password" type="password"
-						maxlength="6">
+						maxlength="6" required>
 				</div>
 				<div>
 					<label></label><input type="submit">

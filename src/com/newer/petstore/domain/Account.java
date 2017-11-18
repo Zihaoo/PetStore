@@ -77,6 +77,15 @@ public class Account {
 		this.orderList = orderList;
 	}
 
+	
+	
+	@Override
+	public String toString() {
+		return "Account [id=" + id + ", name=" + name + ", password=" + password + "]";
+	}
+
+
+
 	/**
 	 * 用户的地址
 	 * @author hwyou

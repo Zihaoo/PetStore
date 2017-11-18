@@ -33,6 +33,7 @@ public class SeachServlet extends HttpServlet {
 		ProductMapper mapper = factory.openSession().getMapper(ProductMapper.class);
 
 		List<Product> list = mapper.search(key);
+		System.out.println(list);
 
 		// 在视图中显示搜索的结果
 		Gson gson = new Gson();

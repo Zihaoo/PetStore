@@ -9,17 +9,13 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-
-
-	<!-- 前端控制器 --> 
-	<servlet>
-		<servlet-name>FrontController</servlet-name>
-		<servlet-class>com.newer.petstore.web.controller.FrontControllerServlet</servlet-class>
-		<load-on-startup>0</load-on-startup>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>FrontController</servlet-name>
-		<url-pattern>*.action</url-pattern>
-	</servlet-mapping>
-	<!-- 前端控制器 --> 
+  <servlet>
+    <servlet-name>FrontController</servlet-name>
+    <servlet-class>com.newer.petstore.web.controller.FrontControllerServlet</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FrontController</servlet-name>
+    <url-pattern>*.action</url-pattern>
+  </servlet-mapping>
 </web-app>

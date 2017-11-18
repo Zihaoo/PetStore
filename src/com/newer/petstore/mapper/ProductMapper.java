@@ -11,6 +11,6 @@ public interface ProductMapper {
 	@Select("select id,title,price,quantity,salesNum,concat('.',pic) picPath from Product order by title")
 	List<Product> findAll();
 	
-	@Select("select * from product where title like concat('%',#{keywords},'%') or info like concat('%',#{keywords},'%')")
+	@Select("select id,title,price,quantity,salesNum,concat('.',pic) picPath from Product where title like concat('%',#{keywords},'%') or info like concat('%',#{keywords},'%')")
 	List<Product> search(String keywords);
 }
