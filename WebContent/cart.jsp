@@ -14,10 +14,11 @@
 </head>
 <body>
 	<%@ include file="header.jsp"%>
-	<h1>${account.name}购物车<a href="index.jsp">继续购物</a></h1>
+	<h1>${account.name}购物车<a href="index.jsp">继续购物</a>
+	</h1>
 	<%
 		Cart cart = (Cart) session.getAttribute(AppInfo.SESSION_CART);
-		HashMap<Product,Integer> m = cart.getMap();
+		HashMap<Product, Integer> m = cart.getMap();
 		Set<Product> products = m.keySet();
 	%>
 	<table>
@@ -28,20 +29,22 @@
 			<th>数量</th>
 		</tr>
 		<%
-			for(Product p: products) {
+			for (Product p : products) {
 		%>
 		<tr>
-			<td><%= p.getTitle() %></td>
- 			<td><%= p.getPrice() %></td>
-			<td><img alt="" src="<%= p.getPicPath() %>"></td>
- 			<td><%= m.get(p) %></td>
+			<td><%=p.getTitle()%></td>
+			<td><%=p.getPrice()%></td>
+			<td><img alt="" src="<%=p.getPicPath()%>"></td>
+			<td><%=m.get(p)%></td>
 		</tr>
 		<%
 			}
 		%>
 	</table>
-	
-	<div><a href="account.jsp">结账</a></div>
+
+	<div>
+		<a href="account.jsp">结账</a>
+	</div>
 	<%@ include file="footer.jsp"%>
 </body>
 </html>
