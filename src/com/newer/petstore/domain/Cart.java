@@ -11,26 +11,48 @@ import java.util.Set;
  *
  */
 public class Cart {
-	//没有持久化，通过计算获得
+
+	// 没有持久化（计算）
 	private BigDecimal total;
 
-	// 商品，数量
+	// 商品、数量
 	private HashMap<Product, Integer> map = new HashMap<>();
 
 	public Cart() {
-		// TODO Auto-generated constructor stub
 	}
 
 	// 重载
 	public void addCart(Product product) {
-		addCart(product,1);
+		if (!map.containsKey(product)) {
+			map.put(product, 1);
+		} else {
+			// 存在
+			map.put(product, map.get(product) + 1);
+		}
 	}
-	
+
 	public void addCart(Product product, int n) {
 		map.put(product, n);
 	}
-	
-	
+
+	/**
+	 * 
+	 * @param product
+	 */
+	public void delete(Product product) {
+		map.remove(product);
+	}
+
+	/**
+	 * 更新
+	 * 
+	 * @param product
+	 * @param n
+	 */
+	public void update(Product product, int n) {
+		map.put(product, n);
+	}
+
 	/**
 	 * 购物车总金额
 	 * 
@@ -45,11 +67,9 @@ public class Cart {
 		return total;
 	}
 
-	public void getSize() {
-		
+	public int getSize() {
+		return map.size();
 	}
-
-
 
 	public HashMap<Product, Integer> getMap() {
 		return map;

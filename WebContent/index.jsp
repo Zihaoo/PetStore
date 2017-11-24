@@ -33,7 +33,7 @@ $(function() {
 		var e =$(this);
 		$.post(
 				'cart',
-				{id:$(this).val()},
+				{id:$(this).val(),action:'add'},
 				function(data) {
 					e.addClass('buy');
 					e.after($('<span>').text('已购买'));
@@ -63,6 +63,7 @@ $('#btnSearch').on('click', function() {
 
 <link href="css/master.css" rel="stylesheet">
 </head>
+
 <body>
 	<%@ include file="header.jsp"%>
 	<h1>
